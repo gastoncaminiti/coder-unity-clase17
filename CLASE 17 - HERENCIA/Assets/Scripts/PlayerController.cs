@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         rbPlayer = GetComponent<Rigidbody>();
         mgInventory = GetComponent<InventoryManager>();
         animPlayer.SetBool("isRun", false);
-        usernameText.text = ProfileManager.instance.GetPlayerName();
+        //usernameText.text = ProfileManager.instance.GetPlayerName();
         SetPlayerRotation();
     }
 
