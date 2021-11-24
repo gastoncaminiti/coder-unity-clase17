@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ZombieBoss : Zombie
 {
-    [SerializeField] private int shield = 1000;
+    //[SerializeField] private int shield = 1000;
     
     [SerializeField] private GameObject player;
 
@@ -21,7 +21,7 @@ public class ZombieBoss : Zombie
     {
         Vector3 playerDirection = GetPlayerDirection();
         rbZombie.rotation = Quaternion.LookRotation(new Vector3(playerDirection.x, 0, playerDirection.z));
-        rbZombie.AddForce(playerDirection * speedEnemy, ForceMode.Impulse);
+        rbZombie.AddForce(playerDirection * myData.Speed, ForceMode.Impulse);
     }
 
     public override void FindEnemy()
